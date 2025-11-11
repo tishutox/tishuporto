@@ -12,7 +12,7 @@ interface ExperienceItemProps {
   companyColor: "blue" | "pink" | "black";
   link?: string;
   tooltip?: string;
-  icon?: React.ComponentType<any>;
+  icon?: React.ElementType;
   customColor?: string; // Hexcode für individuelle Farben
 }
 

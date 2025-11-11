@@ -9,15 +9,8 @@
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import { Button } from "../ui";
-import { cn } from "@/lib/utils";
 
-export default function Cal({
-  className,
-  variant,
-}: {
-  className?: string;
-  variant?: "primary" | "secondary";
-}) {
+export default function Cal() {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "15min" });
