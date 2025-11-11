@@ -3,14 +3,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import {
-  Home,
-  Instagram,
-  Linkedin,
   Github,
-  Music2,
+  Instagram,
+  Twitch,
+  AtSign,
+  BadgeCheck,
   Menu,
   X,
-  ScrollText,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import Cal from "./Cal";
@@ -71,37 +70,30 @@ const MobileSocialLink: React.FC<{
 
 const SOCIAL_LINKS = [
   {
-    href: "https://github.com/yourusername",
-    icon: Github,
-    label: "GitHub",
-    size: 23,
-    strokeWidth: 1.8,
-  },
-  {
-    href: "https://www.instagram.com/yourusername",
+    href: "https://www.instagram.com/tishutox",
     icon: Instagram,
     label: "Instagram",
     size: 23,
     strokeWidth: 1.8,
   },
   {
-    href: "https://www.tiktok.com/@yourusername",
-    icon: Music2,
-    label: "TikTok",
-    size: 22,
-    strokeWidth: 1.8,
-  },
-  {
-    href: "https://yourblog.com/",
-    icon: ScrollText,
-    label: "Blog",
+    href: "https://www.threads.com/@tishutox",
+    icon: AtSign,
+    label: "Threads",
     size: 23,
     strokeWidth: 1.8,
   },
   {
-    href: "https://www.linkedin.com/in/yourusername",
-    icon: Linkedin,
-    label: "LinkedIn",
+    href: "https://www.twitch.tv/tishutox",
+    icon: Twitch,
+    label: "Twtitch",
+    size: 23,
+    strokeWidth: 1.8,
+  },
+  {
+    href: "https://drive.proton.me/urls/E7TMW3Z6F8#grFIDkHnyhtf",
+    icon: BadgeCheck,
+    label: "Certificates",
     size: 23.5,
     strokeWidth: 1.5,
   },
@@ -177,12 +169,12 @@ const Header: React.FC = () => {
         <div className="flex items-center pl-4 p-2 rounded-2xl border border-zinc-200 bg-white/80 backdrop-blur-lg   text-zinc-700 w-fit">
           {/* Home Navigation */}
           <Link
-            href="/"
-            onClick={handleHomeClick}
+            href="https://github.com/tishutox"
+            target="_blank"
             className="hover:opacity-80 transition-opacity mx-auto flex items-center justify-center pl-2"
-            aria-label="Home"
+            aria-label="Github"
           >
-            <Home size={23} />
+            <Github size={23} />
           </Link>
 
           <Divider className="mx-6" />
@@ -214,12 +206,12 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between w-full  rounded-2xl  text-zinc-700">
             {/* Home Navigation */}
             <Link
-              href="/"
-              onClick={handleHomeClick}
+              href="https://github.com/tishutox"
+              target="_blank"
               className="hover:opacity-80 transition-opacity"
-              aria-label="Home"
+              aria-label="Github"
             >
-              <Home className="size-6" />
+              <Github className="size-6" />
             </Link>
 
             {/* Hamburger Menu */}

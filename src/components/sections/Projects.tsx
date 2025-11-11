@@ -68,20 +68,6 @@ const Projects: React.FC = () => {
       image: "/img.jpg",
       techStack: ["Tech", "Stack", "Goes", "Here"],
     },
-    {
-      title: "Project Name Two",
-      description:
-        "Add another project description here. Mention the technologies used, the challenges you faced, and what you learned from building it.",
-      image: "/img.jpg",
-      techStack: ["Your", "Tech", "Stack", "Here"],
-    },
-    {
-      title: "Project Name Three",
-      description:
-        "Add a third project description. Include any notable features, metrics, or outcomes that demonstrate the project's success or impact.",
-      image: "/img.jpg",
-      techStack: ["Add", "Your", "Technologies", "Here"],
-    },
   ];
 
   const DecorativeIcons: React.FC = () => {

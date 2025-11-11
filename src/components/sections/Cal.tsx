@@ -30,17 +30,9 @@ export default function Cal({
   }, []);
   return (
     <Button
-      data-cal-namespace="15min"
-      data-cal-link="yourusername/15min"
-      data-cal-config='{"layout":"month_view","theme":"light"}'
-      type="submit"
-      variant={variant}
-      className={cn(
-        "text-sm rounded-xl lg:text-base w-full md:w-[155px]",
-        className
-      )}
+      onClick={() => window.open('https://www.linkedin.com/in/tishutox/', '_blank')}
     >
-      Book a call
+      LinkedIn
     </Button>
   );
 }

@@ -1,6 +1,20 @@
 "use client";
 import React from "react";
-import { Link2, Instagram } from "lucide-react";
+import { 
+  Braces, 
+  Instagram, 
+  PencilLine,
+  Drill,
+  Code, 
+  GraduationCap, 
+  Building, 
+  Star, 
+  Zap, 
+  Heart, 
+  Sparkles,
+  Diamond,
+  Coffee
+} from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { FadeIn } from "../ui";
@@ -12,6 +26,8 @@ interface ExperienceItemProps {
   companyColor: "blue" | "pink" | "black";
   link?: string;
   tooltip?: string;
+  icon?: React.ComponentType<any>;
+  customColor?: string; // Hexcode für individuelle Farben
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({
@@ -21,8 +37,24 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   companyColor,
   link,
   tooltip,
+  icon,
+  customColor,
 }) => {
   const [isHovered, setIsHovered] = React.useState(false);
+
+  // Funktion zum Generieren der Farben basierend auf Hexcode
+  const generateColorsFromHex = (hexColor: string) => {
+    // Entferne # falls vorhanden
+    const hex = hexColor.replace('#', '');
+    
+    return {
+      bg: { backgroundColor: `${hexColor}15` }, // 15 = ~8% Opazität
+      text: { color: hexColor },
+      icon: { backgroundColor: hexColor },
+      border: { borderColor: `${hexColor}30` }, // 30 = ~19% Opazität
+      iconColor: { color: hexColor }, // Icons haben die gleiche Farbe wie der Text
+    };
+  };
 
   const companyStyles = {
     blue: {
@@ -45,10 +77,18 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
     },
   };
 
-  const style = companyStyles[companyColor];
+  // Verwende benutzerdefinierte Farben wenn vorhanden, sonst Standardfarben
+  const style = customColor ? null : companyStyles[companyColor];
+  const customStyle = customColor ? generateColorsFromHex(customColor) : null;
   const isEducator = role === "Educator";
-  const IconComponent = isEducator ? Instagram : Link2;
-  const iconColor = isEducator
+  
+  // Use custom icon if provided, otherwise fall back to default logic
+  const IconComponent = icon || (isEducator ? Instagram : Braces);
+  
+  // Icon-Farben basierend auf benutzerdefinierten oder Standard-Farben
+  const iconColor = customColor 
+    ? "" // Wird durch inline-style gesetzt
+    : isEducator
     ? "text-pink-500"
     : companyColor === "blue"
     ? "text-sky-600"
@@ -56,24 +96,28 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
     ? "text-pink-600"
     : "text-amber-700";
   const iconSize = isEducator ? "size-[18px]" : "size-5";
-  const iconRotation = isEducator ? "" : "rotate-[-30deg]";
 
   const companyBadge = (
     <div
-      className={`p-1.5 ${style.bg} ${
-        style.border
-      } border rounded-md outline outline-1 outline-offset-[-1px] outline-black/10 flex items-center gap-1.5 ${
+      className={`p-1.5 border rounded-md outline outline-1 outline-offset-[-1px] outline-black/10 flex items-center gap-1.5 ${
         link
           ? "hover:opacity-80 transition-opacity cursor-pointer"
           : tooltip
           ? "cursor-help"
           : ""
-      } relative group`}
+      } relative group ${customColor ? "" : `${style!.bg} ${style!.border}`}`}
+      style={customColor ? { ...customStyle!.bg, ...customStyle!.border } : {}}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <IconComponent className={`${iconSize} ${iconColor} ${iconRotation}`} />
-      <div className={`${style.text} text-[15px] font-medium leading-relaxed`}>
+      <IconComponent 
+        className={`${iconSize} ${customColor ? "" : iconColor}`} 
+        style={customColor ? customStyle!.iconColor : {}}
+      />
+      <div 
+        className={`text-[15px] font-medium leading-relaxed ${customColor ? "" : style!.text}`}
+        style={customColor ? customStyle!.text : {}}
+      >
         {company}
       </div>
 
@@ -148,48 +192,26 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 };
 
 const WorkExperience: React.FC = () => {
-  const experiences = [
-    {
-      period: "Month Year - Present",
-      role: "Your Current Role",
-      company: "Company Name",
-      companyColor: "black" as const,
-      link: "https://company-website.com/",
-    },
+    const experiences = [
 
     {
-      period: "Month Year - Present",
-      role: "Side Project/Role",
-      company: "Your Brand/Project",
+      period: "Oct 2025 - Present",
+      role: "Designer",
+      company: "Void",
       companyColor: "pink" as const,
-      link: "https://your-project.com/",
+      link: "https://void.tha.de/",
+      icon: Braces,
+      customColor: "#ff0350", // Lila für Tech
     },
 
     {
-      period: "Month Year - Month Year",
-      role: "Previous Role",
-      company: "Previous Company",
-      companyColor: "blue" as const,
-      link: "https://previous-company.com/",
-    },
-    {
-      period: "Month Year - Month Year",
-      role: "Another Role",
-      company: "Another Company",
-      companyColor: "blue" as const,
-      link: "https://another-company.com/",
-    },
-    {
-      period: "Month Year - Month Year",
-      role: "Earlier Role",
-      company: "Earlier Company",
-      companyColor: "blue" as const,
-      link: "https://earlier-company.com/",
-    },
-    {
-      period: "Month Year - Month Year",
-      role: "First Role",
+      period: "Sep 2025 - Present",
+      role: "Tutor",
+      company: "Schülerhilfe",
       companyColor: "black" as const,
+      link: "https://www.schuelerhilfe.de/nachhilfe/friedberg-2/",
+      icon: PencilLine,
+      customColor: "#005baa", // Orange für Bildung
     },
   ];
 
