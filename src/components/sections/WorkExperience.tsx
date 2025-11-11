@@ -1,20 +1,6 @@
 "use client";
 import React from "react";
-import { 
-  Braces, 
-  Instagram, 
-  PencilLine,
-  Drill,
-  Code, 
-  GraduationCap, 
-  Building, 
-  Star, 
-  Zap, 
-  Heart, 
-  Sparkles,
-  Diamond,
-  Coffee
-} from "lucide-react";
+import { Braces, Instagram, PencilLine } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { FadeIn } from "../ui";
@@ -44,9 +30,8 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 
   // Funktion zum Generieren der Farben basierend auf Hexcode
   const generateColorsFromHex = (hexColor: string) => {
-    // Entferne # falls vorhanden
-    const hex = hexColor.replace('#', '');
-    
+    // Entferne # falls vorhanden (nicht benötigt in der aktuellen Implementierung)
+    // (keine Verwendung von 'hex' notwendig; wir arbeiten direkt mit hexColor)
     return {
       bg: { backgroundColor: `${hexColor}15` }, // 15 = ~8% Opazität
       text: { color: hexColor },
@@ -83,7 +68,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   const isEducator = role === "Educator";
   
   // Use custom icon if provided, otherwise fall back to default logic
-  const IconComponent = icon || (isEducator ? Instagram : Braces);
+  const IconComponent = (icon || (isEducator ? Instagram : Braces)) as React.ElementType;
   
   // Icon-Farben basierend auf benutzerdefinierten oder Standard-Farben
   const iconColor = customColor 

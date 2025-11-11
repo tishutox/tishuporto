@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import { Button, Container, FadeIn } from "../ui";
+import { Container, FadeIn } from "../ui";
 import Image from "next/image";
-import Link from "next/link";
 
 const Hero: React.FC = () => {
   // Hier können Sie Status und Farbe anpassen
