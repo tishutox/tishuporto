@@ -62,11 +62,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "Project Name One",
+      title: "QuillX",
       description:
-        "Add your project description here. Explain what the project does, what problem it solves, and what makes it interesting or unique.",
+        "Open-source drawing application for Android and iOS devices, featuring a variety of brushes and tools for digital art creation.",
       image: "/img.jpg",
-      techStack: ["Tech", "Stack", "Goes", "Here"],
+      techStack: ["Kotlin", "Copilot"],
     },
   ];
 
