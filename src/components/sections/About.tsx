@@ -79,7 +79,7 @@ const About: React.FC = () => {
             more relatable.]
           </p>
           <p className="font-medium">
-            "The function of good software is to make the complex appear to be simple."
+            &quotThe function of good software is to make the complex appear to be simple.&quot
             – Grady Booch
           </p>
         </div>
