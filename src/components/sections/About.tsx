@@ -79,7 +79,8 @@ const About: React.FC = () => {
             more relatable.]
           </p>
           <p className="font-medium">
-            [End with a strong statement about your work or value proposition.]
+            "The function of good software is to make the complex appear to be simple."
+            – Grady Booch
           </p>
         </div>
       </FadeIn>
