@@ -1,7 +1,6 @@
 import React from "react";
 import { FadeIn } from "../ui";
 import Image from "next/image";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const GalleryImage: React.FC<{
