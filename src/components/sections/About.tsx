@@ -50,12 +50,12 @@ const About: React.FC = () => {
               {" "}
               Here&apos;s what I actually do:
             </b>{" "}
-            [Describe your main skills and expertise. What problems do you solve
-            for your clients? What makes you different from others in your
-            field?]
+            I can code in various programming languages and frameworks, including
+            HTML, CSS, JavaScript, Next.js, Java and Python. I create modern,
+            responsive and user-friendly websites and wewb applications.
           </p>
           <p>
-            [Add sdafawfwafanother paragraph about your approach, methodology, or
+            [Add paragraph about your approach, methodology, or
             philosophy. What&apos;s your unique perspective on your work?]
           </p>
           <p>
@@ -66,20 +66,12 @@ const About: React.FC = () => {
             [Describe the results you deliver for clients or the impact of your
             work.]
           </p>{" "}
-          <br />
-          <Link
-            href="https://yourblog.com/"
-            target="_blank"
-            className="text-[#9D8BF5] underline hover:text-[#8e7ddf] font-medium hover:underline transition-colors"
-          >
-            [Optional: Add link to your blog, articles, or additional content]
-          </Link>{" "}
           <p>
             [Add personal interests or hobbies that humanize you and make you
             more relatable.]
           </p>
           <p className="font-medium">
-            &quotThe function of good software is to make the complex appear to be simple.&quot
+            <q>The function of good software is to make the complex appear to be simple.</q>
             – Grady Booch
           </p>
         </div>
