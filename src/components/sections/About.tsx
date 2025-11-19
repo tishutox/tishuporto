@@ -51,11 +51,11 @@ const About: React.FC = () => {
             </b>{" "}
             I can code in various programming languages and frameworks, including
             HTML, CSS, JavaScript, Next.js, Java and Python. I create modern,
-            responsive and user-friendly websites and wewb applications.
+            responsive and user-friendly websites and web applications.
           </p>
           <p>
-            [Add paragraph about your approach, methodology, or
-            philosophy. What&apos;s your unique perspective on your work?]
+            I specialize in front-end development, ensuring that the user
+            interface is visually appealing and intuitive.
           </p>
           <p>
             [Mention your achievements, community involvement, or notable
