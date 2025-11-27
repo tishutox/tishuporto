@@ -58,8 +58,8 @@ const About: React.FC = () => {
             interface is visually appealing and intuitive.
           </p>
           <p>
-            [Mention your achievements, community involvement, or notable
-            projects. Include numbers or metrics if you have them.]
+            I post some of my projects and coding tutorials on my GitHub and share
+            my thoughts on technology and programming on my LinkedIn.
           </p>
           <p>
             [Describe the results you deliver for clients or the impact of your
