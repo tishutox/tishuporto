@@ -66,8 +66,7 @@ const About: React.FC = () => {
             freelance work, or just to say hi!
           </p>{" "}
           <p>
-            [Add personal interests or hobbies that humanize you and make you
-            more relatable.]
+            Some of my personal interests include gaming, anime, and technology.
           </p>
           <p className="font-medium">
             <q>The function of good software is to make the complex appear to be simple.</q>
