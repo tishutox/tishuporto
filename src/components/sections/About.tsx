@@ -62,8 +62,8 @@ const About: React.FC = () => {
             my thoughts on technology and programming on my LinkedIn.
           </p>
           <p>
-            [Describe the results you deliver for clients or the impact of your
-            work.]
+            If you like what you see, feel free to reach out to me for collaborations,
+            freelance work, or just to say hi!
           </p>{" "}
           <p>
             [Add personal interests or hobbies that humanize you and make you
