@@ -70,7 +70,7 @@ const About: React.FC = () => {
           </p>
           <p className="font-medium">
             <q>The function of good software is to make the complex appear to be simple.</q>
-            – Grady Booch
+             – Grady Booch
           </p>
         </div>
       </FadeIn>
