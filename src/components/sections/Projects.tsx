@@ -62,11 +62,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "QuillX",
+      title: "Akai Senko",
       description:
-        "Open-source drawing application for Android and iOS devices, featuring a variety of brushes and tools for digital art creation.",
-      image: "/img.jpg",
-      techStack: ["Kotlin", "Copilot"],
+        "University project: Foundation of an eSports team including branding, website and social media presence.",
+      image: "/img.png",
+      techStack: ["HTML", "CSS", "JavaScript", "Copilot"],
     },
   ];
 
